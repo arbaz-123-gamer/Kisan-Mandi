@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Next Level Login & Registration Form | Coding Stella</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="form signin">
+            <h2>Sign In</h2>
+            <div class="inputBox">
+                <input type="text" id="signin-username" required="required">
+                <i class="fa-regular fa-user"></i>
+                <span>username</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" id="signin-password" required="required">
+                <i class="fa-solid fa-lock"></i>
+                <span>password</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Login" onclick="validateSignin()">
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <p>Not Registered? <a href="./signup.html" class="create">Create an account</a></p>
+        </div>
+
+    </div>
+
+    <script>
+        let login = document.querySelector('.login');
+        let create = document.querySelector('.create');
+        let container = document.querySelector('.container');
+
+        login.onclick = function(){
+            container.classList.add('signinForm');
+        }
+        
+        create.onclick = function(){
+            container.classList.remove('signinForm');
+        }
+
+        function validateSignup() {
+            const username = document.getElementById('signup-username').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const confirmPassword = document.getElementById('signup-confirm-password').value;
+
+            if (username === "" || email === "" || password === "" || confirmPassword === "") {
+                alert("All fields are required!");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+
+            alert("Sign Up Successful!");
+            // Here you can add further processing like sending data to the server
+        }
+
+        function validateSignin() {
+            const username = document.getElementById('signin-username').value;
+            const password = document.getElementById('signin-password').value;
+
+            if (username === "" || password === "") {
+                alert("All fields are required!");
+                return false;
+            }
+
+            alert("Sign In Successful!");
+            // Here you can add further processing like sending data to the server
+        }
+    </script>
+</body>
+</html>
