@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="form signup">
+      <form>
         <h2>Sign Up</h2>
         <div class="inputBox">
-            <input type="text" id="signup-username" required="required">
-            <i class="fa-regular fa-user"></i>
-            <span>username</span>
+          <input type="text" id="signup-username" required="required" />
+          <i class="fa-regular fa-user"></i>
+          <span>username</span>
         </div>
         <div class="inputBox">
-            <input type="email" id="signup-email" required="required">
-            <i class="fa-regular fa-envelope"></i>
-            <span>email address</span>
+          <input type="email" id="signup-email" required="required" />
+          <i class="fa-regular fa-envelope"></i>
+          <span>email address</span>
         </div>
         <div class="inputBox">
-            <input type="password" id="signup-password" required="required">
-            <i class="fa-solid fa-lock"></i>
-            <span>create password</span>
+          <input
+            type="password"
+            id="signup-password"
+            required="required"
+            autocomplete="on"
+          />
+          <i class="fa-solid fa-lock"></i>
+          <span>create password</span>
         </div>
         <div class="inputBox">
-            <input type="password" id="signup-confirm-password" required="required">
-            <i class="fa-solid fa-lock"></i>
-            <span>confirm password</span>
+          <input
+            type="password"
+            id="signup-confirm-password"
+            required="required"
+            autocomplete="on"
+          />
+          <i class="fa-solid fa-lock"></i>
+          <span>confirm password</span>
         </div>
         <div class="inputBox">
-            <input type="submit" value="Create Account" onclick="validateSignup()">
-            <a href="#" class="forgot-password">Forgot Password?</a>
+          <input
+            type="submit"
+            value="Create Account"
+            onclick="validateSignup(event)"
+          />
+          <a href="#" class="forgot-password">Forgot Password?</a>
         </div>
-        <p>Already a member? <a href="#" class="login">Log in</a></p>
+        <p>Already a member? <a href="login2.html" class="login">Log in</a></p>
+      </form>
     </div>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
